@@ -1,0 +1,205 @@
+/* Personal profile site — warm, readable, a bit of personality */
+
+:root {
+  --bg: #faf8f5;
+  --surface: #fff;
+  --text: #2c2a26;
+  --text-muted: #6b6560;
+  --accent: #362e59;
+  --accent-soft: #6d5f8f;
+  --border: #e8e4df;
+  --shadow: 0 4px 20px rgba(44, 42, 38, 0.06);
+  --radius: 12px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Outfit", sans-serif;
+  font-weight: 400;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: var(--text);
+  background: var(--bg);
+  min-height: 100vh;
+}
+
+.page {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem 3rem;
+}
+
+/* Hero */
+.hero {
+  text-align: center;
+  margin-bottom: 2.5rem;
+  padding: 2rem 0;
+}
+
+.name {
+  font-family: "Playfair Display", serif;
+  font-size: clamp(2rem, 5vw, 2.75rem);
+  font-weight: 400;
+  margin: 0 0 0.5rem;
+  color: var(--text);
+  letter-spacing: 0.02em;
+}
+
+.tagline {
+  font-size: 1rem;
+  color: var(--text-muted);
+  margin: 0;
+  font-weight: 300;
+}
+
+/* Cards */
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.card {
+  background: var(--surface);
+  border-radius: var(--radius);
+  padding: 1.5rem 1.75rem;
+  box-shadow: var(--shadow);
+  border: 1px solid var(--border);
+}
+
+.card h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 1.25rem;
+  font-weight: 400;
+  margin: 0 0 1rem;
+  color: var(--text);
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--accent-soft);
+}
+
+/* Basics list */
+.info-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.info-list li {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.5rem 1rem;
+  padding: 0.4rem 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.info-list li:last-child {
+  border-bottom: none;
+}
+
+.label {
+  font-weight: 600;
+  color: var(--text-muted);
+  min-width: 7rem;
+}
+
+.value {
+  color: var(--text);
+}
+
+.color-swatch {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.color-swatch::before {
+  content: "";
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  background: #362e59;
+  border: 2px solid var(--border);
+}
+
+/* About paragraph */
+.about p {
+  margin: 0;
+  color: var(--text);
+}
+
+/* Favorites */
+.favorites-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.favorites-list li {
+  padding: 0.35rem 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.favorites-list li:last-child {
+  border-bottom: none;
+}
+
+.favorites-list strong {
+  color: var(--text-muted);
+  font-weight: 600;
+  margin-right: 0.5rem;
+}
+
+/* Contact links */
+.contact p {
+  margin: 0 0 0.75rem;
+  color: var(--text);
+}
+
+.links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem 1.25rem;
+}
+
+.links a {
+  color: var(--accent);
+  font-weight: 600;
+  text-decoration: none;
+  padding: 0.25rem 0;
+  border-bottom: 2px solid transparent;
+  transition: border-color 0.2s, color 0.2s;
+}
+
+.links a:hover {
+  color: var(--text);
+  border-bottom-color: var(--accent);
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  margin-top: 2.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border);
+}
+
+footer p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+footer code {
+  font-size: 0.85em;
+  background: var(--border);
+  padding: 0.15rem 0.4rem;
+  border-radius: 4px;
+}
